@@ -16,11 +16,27 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Add effect to prevent body scrolling when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
 
@@ -85,13 +101,22 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 z-40 md:hidden bg-cyber-black/95 backdrop-blur-md overflow-y-auto">
           <div className="container mx-auto px-4 pt-20 pb-8">
+            {/* Close button at the top right */}
+            <button
+              className="absolute top-4 right-4 text-white p-2"
+              onClick={closeMobileMenu}
+              aria-label="Close menu"
+            >
+              <X className="h-6 w-6" />
+            </button>
+            
             <nav className="flex flex-col items-center space-y-6">
               <a 
                 href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="cyber-button w-full max-w-xs text-center"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
               >
                 USE AI TOOLS EXPERT & FINDER GPT NOW
               </a>
@@ -112,7 +137,7 @@ const Navbar = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={closeMobileMenu}
               >
                 More AI Tools
               </a>
