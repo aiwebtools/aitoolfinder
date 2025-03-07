@@ -56,7 +56,18 @@ const Hero = () => {
           </div>
           
           <div className="mt-16 animate-fade-in" style={{ animationDelay: '0.6s' }}>
-            <p className="text-white/60 mb-3">ACCESS 1000+ AI TOOLS</p>
+            <p className="text-white/60 mb-3">
+              ACCESS THE WORLD OF AI TOOLS WITH <span className="font-bold">AI TOOLS EXPERT & FINDER GPT</span> 
+              <span className="block text-sm mt-1">
+                Presented by <a 
+                  href="https://www.aiwebtools.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors">
+                  AiWebTools.Ai
+                </a>
+              </span>
+            </p>
             <a
               href="https://docs.google.com/document/d/1qtDKo3XN_EsspgrQD72Cpq2qh83H5xSd/edit?usp=drivesdk&ouid=116187507271950139405&rtpof=true&sd=true"
               target="_blank"
@@ -66,7 +77,7 @@ const Hero = () => {
               <img 
                 src="https://img1.wsimg.com/isteam/ip/9fd6d942-5b46-4025-92e2-0f1ec2a7adf2/blob-aab53a2.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1152,cg:true" 
                 alt="AI Tools Collection" 
-                className="w-full max-w-md mx-auto rounded shadow-lg"
+                className="w-full max-w-xs mx-auto rounded shadow-lg"
                 loading="lazy"
               />
             </a>
