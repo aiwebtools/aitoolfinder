@@ -1,92 +1,39 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 220 20% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 220 20% 7%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 220 20% 4%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 180 100% 50%;
+    --primary-foreground: 220 20% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 300 100% 50%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 20% 8%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
+    --accent: 280 75% 50%;
     --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 20% 12%;
+    --input: 220 20% 12%;
+    --ring: 180 100% 50%;
+
+    --radius: 0.5rem;
   }
 }
 
@@ -96,6 +43,142 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-cyber-dark text-foreground font-sans antialiased overflow-x-hidden;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl shadow-xl;
+  }
+  
+  .neon-border {
+    @apply relative;
+  }
+  
+  .neon-border::before {
+    content: '';
+    @apply absolute -inset-0.5 rounded-xl bg-gradient-to-r from-cyber-neon-blue via-cyber-neon-purple to-cyber-neon-pink opacity-70 blur-sm transition-all duration-300;
+  }
+  
+  .neon-border:hover::before {
+    @apply opacity-100 blur-md;
+  }
+  
+  .interactive-card {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+  }
+  
+  .cyber-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-purple text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-cyber-neon-blue/50 hover:scale-105 active:scale-95;
+  }
+  
+  .cyber-button-secondary {
+    @apply relative overflow-hidden bg-gradient-to-r from-cyber-neon-pink to-cyber-neon-purple text-white font-medium px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-cyber-neon-pink/50 hover:scale-105 active:scale-95;
+  }
+  
+  .cyber-button-outline {
+    @apply relative overflow-hidden bg-transparent border border-cyber-neon-blue text-cyber-neon-blue font-medium px-6 py-3 rounded-full transition-all duration-300 hover:bg-cyber-neon-blue/10 hover:shadow-cyber-neon-blue/30 hover:scale-105 active:scale-95;
+  }
+  
+  .section-title {
+    @apply text-3xl sm:text-4xl font-bold mb-6 bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-pink bg-clip-text text-transparent;
+  }
+  
+  .section-subtitle {
+    @apply text-xl font-medium mb-4 text-white/80;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E141B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00FFFF, #8A2BE2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7DF9FF, #FF00FF);
+}
+
+/* 3D text effect */
+.cyber-text-3d {
+  text-shadow: 
+    0 1px 0 rgba(255, 255, 255, 0.4),
+    0 2px 0 rgba(255, 255, 255, 0.3),
+    0 3px 0 rgba(255, 255, 255, 0.2),
+    0 4px 0 rgba(255, 255, 255, 0.1),
+    0 10px 20px rgba(0, 0, 0, 0.9);
+}
+
+/* Gradients */
+.cyber-gradient-text {
+  background: linear-gradient(to right, #00FFFF, #FF00FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Shooting stars */
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #00FFFF, #8A2BE2, transparent);
+  animation: shooting-star 5s linear infinite;
+  opacity: 0;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 3px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 6px rgba(0, 255, 255, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.8)) drop-shadow(0 0 12px rgba(0, 255, 255, 0.4));
+  }
+}
+
+.glow-effect {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Page transitions */
+.page-transition-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms, transform 400ms;
+}
+
+.page-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-transition-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
 }

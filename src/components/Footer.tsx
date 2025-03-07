@@ -1,0 +1,147 @@
+
+import React from 'react';
+import { Phone, Mail, ExternalLink } from 'lucide-react';
+import Logo from './Logo';
+
+const Footer = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <footer className="bg-cyber-black py-12">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="space-y-4">
+            <Logo />
+            <p className="text-gray-400 text-sm mt-4">
+              Find the perfect AI tools for your projects and needs with our expert AI assistant.
+            </p>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a 
+                  href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors flex items-center gap-2"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  <span>Use AI Tools Expert & Finder GPT</span>
+                </a>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('faq')}
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
+                >
+                  FAQ
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('disclaimer')}
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
+                >
+                  Disclaimer
+                </button>
+              </li>
+              <li>
+                <a 
+                  href="https://www.aiwebtools.ai" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
+                >
+                  More AI Tools
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <a 
+                  href="https://openai.com/policies/privacy-policy/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://aiwebtools.ai/terms-of-services" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
+                >
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li>
+                <a 
+                  href="tel:+14758008096" 
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors flex items-center gap-2"
+                >
+                  <Phone className="h-4 w-4" />
+                  <span>(475) 800-8096</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:Contact@ai-webtools.com" 
+                  className="text-gray-400 hover:text-cyber-neon-blue transition-colors flex items-center gap-2"
+                >
+                  <Mail className="h-4 w-4" />
+                  <span>Contact@ai-webtools.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between">
+          <div className="text-gray-500 text-sm">
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-cyber-neon-blue transition-colors"
+            >
+              © 2025 AI WEB TOOLS LLC. All rights reserved.
+            </a>
+          </div>
+          
+          <div className="mt-4 md:mt-0">
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 rounded-full bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-purple text-white text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50"
+            >
+              More AI Tools
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
