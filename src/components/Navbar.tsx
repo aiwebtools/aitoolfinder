@@ -81,46 +81,45 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile Menu */}
-      <div 
-        className={`fixed inset-0 z-40 transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen 
-            ? 'translate-x-0 opacity-100' 
-            : 'translate-x-full opacity-0'
-        } md:hidden`}
-      >
-        <div className="absolute inset-0 bg-cyber-black opacity-90"></div>
-        <nav className="absolute inset-0 flex flex-col items-center justify-center space-y-8 p-4">
-          <a 
-            href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="cyber-button w-full max-w-xs text-center"
-          >
-            USE AI TOOLS EXPERT & FINDER GPT NOW
-          </a>
-          <button 
-            onClick={() => scrollToSection('faq')}
-            className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
-          >
-            FAQ
-          </button>
-          <button 
-            onClick={() => scrollToSection('disclaimer')}
-            className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
-          >
-            Disclaimer
-          </button>
-          <a 
-            href="https://www.aiwebtools.ai" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
-          >
-            More AI Tools
-          </a>
-        </nav>
-      </div>
+      {/* Mobile Menu - Fixed positioning with better background and padding */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 z-40 md:hidden bg-cyber-black/95 backdrop-blur-md overflow-y-auto">
+          <div className="container mx-auto px-4 pt-20 pb-8">
+            <nav className="flex flex-col items-center space-y-6">
+              <a 
+                href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="cyber-button w-full max-w-xs text-center"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                USE AI TOOLS EXPERT & FINDER GPT NOW
+              </a>
+              <button 
+                onClick={() => scrollToSection('faq')}
+                className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
+              >
+                FAQ
+              </button>
+              <button 
+                onClick={() => scrollToSection('disclaimer')}
+                className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
+              >
+                Disclaimer
+              </button>
+              <a 
+                href="https://www.aiwebtools.ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-xl text-white hover:text-cyber-neon-blue transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                More AI Tools
+              </a>
+            </nav>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
