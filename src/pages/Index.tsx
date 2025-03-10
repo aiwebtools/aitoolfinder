@@ -7,6 +7,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import Legal from '../components/Legal';
 import Footer from '../components/Footer';
+import DisclaimerPopup from '../components/DisclaimerPopup';
 
 const Index = () => {
   // Add scroll reveal animations
@@ -36,6 +37,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-cyber-dark text-white overflow-x-hidden">
+      <DisclaimerPopup />
       <Navbar />
       <Hero />
       <Features />
