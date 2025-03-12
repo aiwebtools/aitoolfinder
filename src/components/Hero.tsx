@@ -66,7 +66,7 @@ const Hero = () => {
               <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/IrKKi3SX89g?autoplay=1&mute=0&controls=1&showinfo=0&rel=0" 
+                src="https://www.youtube.com/embed/IrKKi3SX89g?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&vq=hd1080&iv_load_policy=3" 
                 title="AI Tools Expert & Finder GPT" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
