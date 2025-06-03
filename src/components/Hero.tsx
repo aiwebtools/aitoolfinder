@@ -28,24 +28,38 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 cyber-text-3d animate-fade-in">
-            <span className="cyber-gradient-text">AI Tools Expert & Finder GPT</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/80 mb-8 animate-fade-in" style={{
-            animationDelay: '0.2s'
-          }}>
-            Find the perfect AI tools for your projects - recommended by an expert AI assistant
-          </p>
+          <header>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 cyber-text-3d animate-fade-in">
+              <span className="cyber-gradient-text">AI Tools Expert & Finder GPT</span>
+            </h1>
+            
+            <h2 className="text-xl md:text-2xl text-white/80 mb-8 animate-fade-in" style={{
+              animationDelay: '0.2s'
+            }}>
+              Find the Best Free AI Tools for Your Projects - Expert AI Tool Recommendations from AIWebTools.AI
+            </h2>
+          </header>
           
           <div className="space-y-4 md:space-y-0 md:space-x-4 flex flex-col md:flex-row justify-center items-center animate-fade-in" style={{
             animationDelay: '0.4s'
           }}>
-            <a href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" target="_blank" rel="noopener noreferrer" className="cyber-button w-full md:w-auto">
+            <a 
+              href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cyber-button w-full md:w-auto"
+              aria-label="Use AI Tools Expert & Finder GPT - Best AI Tools Finder"
+            >
               USE AI TOOLS EXPERT & FINDER GPT NOW
             </a>
             
-            <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="cyber-button-outline w-full md:w-auto">
+            <a 
+              href="https://www.aiwebtools.ai" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cyber-button-outline w-full md:w-auto"
+              aria-label="Explore AI Web Tools - Free AI Tools Directory"
+            >
               EXPLORE OUR FULL AI TOOL SELECTION
             </a>
           </div>
@@ -54,10 +68,10 @@ const Hero = () => {
             animationDelay: '0.6s'
           }}>
             <p className="text-white/60 mb-3">
-              ACCESS THE WORLD OF AI TOOLS WITH <span className="font-bold">AI TOOLS EXPERT & FINDER GPT</span> 
+              ACCESS 900+ AI TOOLS WITH <span className="font-bold">AI TOOLS EXPERT & FINDER GPT</span> 
               <span className="block text-sm mt-1">
-                Presented by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors">
-                  AiWebTools.Ai
+                Powered by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors">
+                  AiWebTools.Ai - Your Premier AI Tools Directory
                 </a>
               </span>
             </p>
@@ -67,11 +81,12 @@ const Hero = () => {
                 width="560" 
                 height="315" 
                 src="https://www.youtube.com/embed/IrKKi3SX89g?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&vq=hd1080&iv_load_policy=3" 
-                title="AI Tools Expert & Finder GPT" 
+                title="AI Tools Expert & Finder GPT - Best Free AI Tools 2025" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
                 className="w-full aspect-video max-w-3xl mx-auto"
+                loading="lazy"
               ></iframe>
             </div>
           </div>
