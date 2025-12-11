@@ -45,30 +45,40 @@ const Navbar = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-cyber-dark/80 backdrop-blur-lg shadow-lg py-2' : 'bg-transparent py-4'
       }`}
+      role="banner"
+      itemScope
+      itemType="https://schema.org/WPHeader"
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Logo />
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav 
+            className="hidden md:flex items-center space-x-6"
+            aria-label="Main navigation for AI Tools Expert"
+            role="navigation"
+          >
             <a 
               href="https://chatgpt.com/g/g-8t4uyWOrI-ai-tools-expert-finder-gpt" 
               target="_blank" 
               rel="noopener noreferrer"
               className="cyber-button"
+              title="Use AI Tools Expert & Finder GPT - Find Best Free AI Tools 2025"
             >
               USE AI TOOLS EXPERT & FINDER GPT NOW
             </a>
             <button 
               onClick={() => scrollToSection('faq')}
               className="text-white hover:text-cyber-neon-blue transition-colors"
+              title="Frequently Asked Questions about AI Tools"
             >
-              FAQ
+              AI Tools FAQ
             </button>
             <button 
               onClick={() => scrollToSection('disclaimer')}
               className="text-white hover:text-cyber-neon-blue transition-colors"
+              title="Disclaimer for AI Tools Directory"
             >
               Disclaimer
             </button>
@@ -77,8 +87,9 @@ const Navbar = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className="text-white hover:text-cyber-neon-blue transition-colors"
+              title="Explore More Free AI Tools at AIWebTools.AI"
             >
-              More AI Tools
+              More Free AI Tools
             </a>
           </nav>
           
@@ -86,12 +97,13 @@ const Navbar = () => {
           <button 
             className="md:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-label={isMobileMenuOpen ? "Close AI tools menu" : "Open AI tools menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
-              <X className="h-6 w-6" />
+              <X className="h-6 w-6" aria-hidden="true" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6 w-6" aria-hidden="true" />
             )}
           </button>
         </div>
