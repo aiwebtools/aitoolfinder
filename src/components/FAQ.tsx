@@ -37,43 +37,59 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 relative">
+    <section 
+      id="faq" 
+      className="py-20 relative"
+      itemScope 
+      itemType="https://schema.org/FAQPage"
+      aria-labelledby="faq-heading"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="section-title">Frequently Asked Questions</h2>
+          <h2 id="faq-heading" className="section-title">Frequently Asked Questions About AI Tools Expert & Finder GPT</h2>
           <p className="text-white/80 text-lg">
-            Everything you need to know about AI Tools Expert & Finder GPT
+            Everything you need to know about finding the best free AI tools with AI Tools Expert & Finder GPT
           </p>
         </div>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto" role="list" aria-label="Frequently asked questions about AI tools">
           {faqItems.map((item, index) => (
-            <div 
+            <article 
               key={index} 
               className="mb-4 glass-panel overflow-hidden rounded-xl"
+              itemScope 
+              itemProp="mainEntity" 
+              itemType="https://schema.org/Question"
+              role="listitem"
             >
               <button
                 className="w-full flex justify-between items-center p-4 text-left focus:outline-none"
                 onClick={() => toggleFaq(index)}
+                aria-expanded={openIndex === index}
+                aria-controls={`faq-answer-${index}`}
               >
-                <span className="text-white font-medium">{item.question}</span>
+                <h3 itemProp="name" className="text-white font-medium">{item.question}</h3>
                 {openIndex === index ? (
-                  <ChevronUp className="h-5 w-5 text-cyber-neon-blue" />
+                  <ChevronUp className="h-5 w-5 text-cyber-neon-blue" aria-hidden="true" />
                 ) : (
-                  <ChevronDown className="h-5 w-5 text-cyber-neon-blue" />
+                  <ChevronDown className="h-5 w-5 text-cyber-neon-blue" aria-hidden="true" />
                 )}
               </button>
               
               <div 
+                id={`faq-answer-${index}`}
                 className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index ? 'max-h-96' : 'max-h-0'
                 }`}
+                itemScope 
+                itemProp="acceptedAnswer" 
+                itemType="https://schema.org/Answer"
               >
-                <div className="p-4 pt-0 text-white/70">
+                <div className="p-4 pt-0 text-white/70" itemProp="text">
                   {item.answer}
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
         

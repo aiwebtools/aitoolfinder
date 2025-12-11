@@ -36,7 +36,14 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-cyber-dark text-white overflow-x-hidden">
+    <main 
+      className="min-h-screen bg-cyber-dark text-white overflow-x-hidden"
+      itemScope 
+      itemType="https://schema.org/WebPage"
+    >
+      <meta itemProp="name" content="AI Tools Expert & Finder GPT - Best Free AI Tools 2025" />
+      <meta itemProp="description" content="Find the best free AI tools for any project. Discover 900+ AI tools including AI writing tools, AI image generators, AI video tools, AI coding assistants, and more." />
+      <meta itemProp="url" content="https://aiwebtools.ai" />
       <DisclaimerPopup />
       <Navbar />
       <Hero />
@@ -45,7 +52,7 @@ const Index = () => {
       <FAQ />
       <Legal />
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -12,21 +12,28 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-cyber-black py-12">
+    <footer 
+      className="bg-cyber-black py-12"
+      itemScope 
+      itemType="https://schema.org/WPFooter"
+      role="contentinfo"
+    >
       <div className="container mx-auto px-4 md:px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Column */}
-          <div className="space-y-4">
+          <div className="space-y-4" itemScope itemType="https://schema.org/Organization">
             <Logo />
-            <p className="text-gray-400 text-sm mt-4">
-              Find the perfect AI tools for your projects and needs with our expert AI assistant.
+            <p className="text-gray-400 text-sm mt-4" itemProp="description">
+              AI Tools Expert & Finder GPT helps you find the best free AI tools for any project. Discover 900+ AI tools including AI writing tools, AI image generators, AI video tools, AI coding assistants, and AI marketing tools.
             </p>
+            <meta itemProp="name" content="AI WEB TOOLS LLC" />
+            <meta itemProp="url" content="https://aiwebtools.ai" />
           </div>
           
           {/* Quick Links Column */}
-          <div>
-            <h3 className="text-white font-semibold mb-4 text-left">Quick Links</h3>
+          <nav aria-label="Quick links to AI tools">
+            <h3 className="text-white font-semibold mb-4 text-left">Best Free AI Tools</h3>
             <ul className="space-y-3 text-left">
               <li>
                 <a 
@@ -34,23 +41,26 @@ const Footer = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-cyber-neon-blue transition-colors flex items-center gap-2"
+                  title="Use AI Tools Expert & Finder GPT - Find Best Free AI Tools"
                 >
-                  <ExternalLink className="h-4 w-4 flex-shrink-0" />
-                  <span>Use AI Tools Expert & Finder GPT</span>
+                  <ExternalLink className="h-4 w-4 flex-shrink-0" aria-hidden="true" />
+                  <span>AI Tools Expert & Finder GPT</span>
                 </a>
               </li>
               <li>
                 <button 
                   onClick={() => scrollToSection('faq')}
                   className="text-gray-400 hover:text-cyber-neon-blue transition-colors w-full text-left"
+                  title="Frequently Asked Questions about AI Tools"
                 >
-                  FAQ
+                  AI Tools FAQ
                 </button>
               </li>
               <li>
                 <button 
                   onClick={() => scrollToSection('disclaimer')}
                   className="text-gray-400 hover:text-cyber-neon-blue transition-colors w-full text-left"
+                  title="Disclaimer for AI Tools Directory"
                 >
                   Disclaimer
                 </button>
@@ -61,12 +71,13 @@ const Footer = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
+                  title="Explore More Free AI Tools at AIWebTools.AI"
                 >
-                  More AI Tools
+                  More Free AI Tools
                 </a>
               </li>
             </ul>
-          </div>
+          </nav>
           
           {/* Legal Column */}
           <div>
