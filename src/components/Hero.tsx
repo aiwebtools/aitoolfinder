@@ -80,7 +80,7 @@ const Hero = () => {
               <iframe 
                 width="560" 
                 height="315" 
-                src="https://www.youtube.com/embed/IrKKi3SX89g?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&vq=hd1080&iv_load_policy=3" 
+                src="https://www.youtube.com/embed/p3czNalrf8c?autoplay=1&mute=0&controls=1&showinfo=0&rel=0&vq=hd1080&iv_load_policy=3"
                 title="AI Tools Expert & Finder GPT - Best Free AI Tools 2025" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
