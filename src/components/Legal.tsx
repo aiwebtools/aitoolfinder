@@ -74,7 +74,7 @@ const Legal = () => {
               </a>
               <span className="text-white/30">|</span>
               <a
-                href="https://aiwebtools.ai/terms-of-services"
+                href="https://aiwebtools.lovable.app/terms-of-services"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors text-sm"

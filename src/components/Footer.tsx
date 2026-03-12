@@ -67,7 +67,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://www.aiwebtools.ai" 
+                  href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
@@ -95,7 +95,7 @@ const Footer = () => {
               </li>
               <li>
                 <a 
-                  href="https://aiwebtools.ai/terms-of-services" 
+                  href="https://aiwebtools.lovable.app/terms-of-services" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-cyber-neon-blue transition-colors"
@@ -138,7 +138,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="text-gray-500 text-sm">
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-cyber-neon-blue transition-colors"
@@ -150,7 +150,7 @@ const Footer = () => {
             {/* More AI Tools Button */}
             <div className="mt-4 md:mt-0">
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="px-4 py-1.5 rounded-full bg-gradient-to-r from-cyber-neon-blue to-cyber-neon-purple text-white text-sm font-medium transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/50"
