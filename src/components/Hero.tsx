@@ -41,7 +41,7 @@ const Hero = () => {
               USE AI TOOLS EXPERT & FINDER GPT NOW
             </a>
             
-            <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="cyber-button-outline w-full md:w-auto" aria-label="Explore AI Web Tools - Free AI Tools Directory">
+            <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="cyber-button-outline w-full md:w-auto" aria-label="Explore AI Web Tools - Free AI Tools Directory">
               EXPLORE OUR FULL AI TOOL SELECTION
             </a>
           </div>
