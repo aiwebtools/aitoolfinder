@@ -145,7 +145,7 @@ const Navbar = () => {
                 Disclaimer
               </button>
               <a 
-                href="https://www.aiwebtools.ai" 
+                href="https://aiwebtools.lovable.app/?via=aiwebtools" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-xl text-white hover:text-cyber-neon-blue transition-colors"

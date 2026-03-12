@@ -52,7 +52,7 @@ const Hero = () => {
             <p className="text-white/60 mb-3">
               ACCESS <strong>1900+ FREE AI TOOLS</strong> WITH <span className="font-bold">AI TOOLS EXPERT & FINDER GPT</span> 
               <span className="block text-sm mt-1">
-                Powered by <a href="https://www.aiwebtools.ai" target="_blank" rel="noopener noreferrer" className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors" title="AIWebTools.AI - Premier Free AI Tools Directory 2025">
+                Powered by <a href="https://aiwebtools.lovable.app/?via=aiwebtools" target="_blank" rel="noopener noreferrer" className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors" title="AIWebTools.AI - Premier Free AI Tools Directory 2025">
                   AIWebTools.AI - Your Premier Free AI Tools Directory
                 </a>
               </span>

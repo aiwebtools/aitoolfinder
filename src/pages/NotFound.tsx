@@ -32,7 +32,7 @@ const NotFound = () => {
           </Link>
           
           <a
-            href="https://www.aiwebtools.ai"
+            href="https://aiwebtools.lovable.app/?via=aiwebtools"
             target="_blank"
             rel="noopener noreferrer"
             className="cyber-button-outline w-full flex items-center justify-center gap-2"

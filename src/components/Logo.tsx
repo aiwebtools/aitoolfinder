@@ -20,9 +20,9 @@ const Logo = () => {
           </a>
           <span className="text-xs text-gray-400">
             Presented by <a 
-              href="https://www.aiwebtools.ai" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            href="https://aiwebtools.lovable.app/?via=aiwebtools" 
+            target="_blank" 
+            rel="noopener noreferrer"
               className="text-cyber-neon-blue hover:text-cyber-neon-purple transition-colors">
               AiWebTools.Ai
             </a>
